@@ -1,0 +1,52 @@
+﻿@using Session.NET.Models.CommonModels
+@model CommonResponseModel
+
+
+<ul>
+    @foreach (var item in Model.categoriesText)
+    {
+
+        <li>
+                @item.Id || @item.Name || @item.State
+        </li>
+
+    }
+</ul>
+
+<table>
+    <thead>
+       <tr>
+            <th>
+                No
+            </th>
+           <th>
+               Kullanıcı Adı
+           </th>
+            <th>
+                Şifresi
+            </th>
+            <th>
+                Durum
+            </th>
+       </tr>
+    </thead>
+
+    <tbody>
+       
+
+        <tr>
+            <td>
+                @Model.usersText.Id
+            </td>
+               
+            <td>
+                @Model.usersText.UserName
+             </td>
+             
+             <td>
+                @Model.usersText.Password
+             </td>
+        </tr>
+        
+    </tbody>
+</table>
